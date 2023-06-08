@@ -1,0 +1,57 @@
+#Buat ADT Mahasiswa dengan member data nama(string) dan ipk(double)
+struct Mahasiswa{
+string nama;
+double ipk;
+};
+
+#Buat ADT node berisi member data mhs dengan pointer
+struct Mahasiswa{
+string nama;
+double ipk;
+};
+struct Node{
+struct Mahasiswa mhs;
+struct Node* next;
+};
+
+#Tambah belakang kodingan pak didik
+void MyList::tambahBelakang(intdataBaru){
+Node* baru;
+baru = new Node;
+baru -> data = dataBaru;
+baru -> next = NULL;
+if(isEmpty()){
+head = baru;
+} else
+{
+Node* bantu = head;
+while(bantu->next != NULL)
+bantu = bantu->next;
+bantu->next = baru;
+}
+}
+
+#Hapus depan pak didik
+void MyList::hapusDepan(){
+    Node* hapus;
+    if(isEmpty()){
+        cout << "List Kosong";
+    } else {
+        hapus = head;
+        head = head->next;
+        delete hapus;
+    }
+}
+
+#tukar a,b,c
+void tukar(int& a, int& b, int& c){
+    if(a>b){
+        swap(a,b);
+    }
+    if(b>c){
+        swap(b,c);
+    }
+    if(a>b){
+        swap(a,b)
+    }
+}
